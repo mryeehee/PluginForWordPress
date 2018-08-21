@@ -26,4 +26,4 @@
 
 # 开源协议：GPL v3
 
-# 原作者：iamxjb 作者官方网站 https://www.watch-life.net
+# 原作者：iamxjb 作者官方网站 https://github.com/iamxjb/wp-rest-api-for-app
