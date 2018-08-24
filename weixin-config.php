@@ -14,9 +14,7 @@ function register_weixinappsettings() {
     register_setting( 'weixinapp-group', 'wf_secret' );
     register_setting( 'weixinapp-group', 'wf_swipe' );
     register_setting( 'weixinapp-group', 'wf_poster_imageurl' );
-    register_setting( 'weixinapp-group', 'wf_enable_comment_option' );
-       
-    
+    register_setting( 'weixinapp-group', 'wf_enable_comment_option' );  
     
 }
 
@@ -68,8 +66,12 @@ function weixinapp_settings_page() {
         <td><img src="https://www.yeehee.cn/wp-content/uploads/2018/06/2018062715424440.jpg" style="width:210px; height:210px;" /></td>
         </tr>
 
-    </table>
-    
+        <tr valign="top">
+        <th scope="row">验证授权信息</th>
+        <td><?php allow_domain();?> </td>
+        </tr>
+
+    </table>    
     <?php submit_button();?>
 </form>
 </div>
@@ -80,7 +82,6 @@ function weixinapp_settings_page() {
 
 
 
- 
 
 
 
