@@ -312,6 +312,28 @@ function https_request($url)
     return $data;
 }
 
+//验证域名权限
+function allow_domain(){
+    $is_allow=false;
+    //获取不带端口号的域名前缀
+    $servername=trim($_SERVER['SERVER_NAME']);
+    //授权域名列表
+    $Array=array("www.yeehee.cn","yeehee.cn");
+    //遍历数组
+    foreach($Array as $value){
+            $value=trim($value);
+            $domain=explode($value,$servername);
+            if(count($domain)>1){
+                $is_allow=true;
+                break;
+            }
+    }
+    if(!$is_allow){
+        die("阿噢~~该域名未授权，请联系作者（Wechat ID: ryan_yuu）购买授权版本");//授权失败
+    }else{
+        echo "恭喜您，该域名已授权，请点击保存按钮完成配置！"; //授权成功
+    }
+}
 
 function time_tran($the_time){
     $now_time = date("Y-m-d H:i:s",time()+8*60*60); 
