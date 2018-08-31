@@ -67,7 +67,7 @@ function weixinapp_settings_page() {
         </tr>
 
         <tr valign="top">
-        <th scope="row">验证授权信息</th>
+        <th scope="row"></th>
         <td><?php allow_domain();?> </td>
         </tr>
 
