@@ -68,7 +68,7 @@ function weixinapp_settings_page() {
 
         <tr valign="top">
         <th scope="row"></th>
-        <td><?php allow_domain();?> </td>
+        <td><?php allow_domain(); ?></td>
         </tr>
 
     </table>    

@@ -83,7 +83,7 @@ $response = new WP_REST_Response($data);
 // Add a custom status code
 $response->set_status( 200 ); 
 // Add a custom header
-//$response->header( 'Location', 'https://www.watch-life.net' );
+$response->header( 'Location', 'https://www.yeehee.cn' );
 return $response;
 }
 

@@ -100,9 +100,9 @@ function custom_fields_rest_prepare_post( $data, $post, $request) {
     }
     else 
     {
-        unset($_data['content'] );   
+        //unset($_data['content'] );   
         unset($_data['author']); 
-        unset($_data['excerpt']);
+        //unset($_data['excerpt']);
     }
     $pageviews =$post_views ;   
     $_data['pageviews'] = $pageviews;
@@ -114,6 +114,7 @@ function custom_fields_rest_prepare_post( $data, $post, $request) {
     $_data['next_post_title'] = !empty($next_post->post_title)?$next_post->post_title:null;
     $_data['previous_post_id'] = !empty($previous_post->ID)?$previous_post->ID:null;
     $_data['previous_post_title'] = !empty($previous_post->post_title)?$previous_post->post_title:null;
+  	$_data['excerpt']['rendered'] = strip_tags( $_data['excerpt']['rendered'] ); //调用文章摘要或者摘取文章开头内容，调用方法：item.excerpt.rendered
         
      
     
