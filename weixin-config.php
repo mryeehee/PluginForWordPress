@@ -1,44 +1,25 @@
-<?php
- // 微信小程序设置菜单
-add_action('admin_menu', 'weixinapp_create_menu');
-function weixinapp_create_menu() {
-    // 创建新的顶级菜单
-    add_options_page('微信小程序设置', '微信小程序设置', 'administrator', 'weixinapp_slug', 'weixinapp_settings_page', '');
-    // 调用注册设置函数
-    add_action( 'admin_init', 'register_weixinappsettings' );
-}
-
-function register_weixinappsettings() {
-    // 注册设置
-    register_setting( 'weixinapp-group', 'wf_appid' );
-    register_setting( 'weixinapp-group', 'wf_secret' );
-    register_setting( 'weixinapp-group', 'wf_swipe' );
-    register_setting( 'weixinapp-group', 'wf_poster_imageurl' );
-    register_setting( 'weixinapp-group', 'wf_enable_comment_option' );  
-    
-}
-
-function weixinapp_settings_page() {
-?>
+<?php  if(!function_exists('O5bb398e2')){ function O5bb398e2($O0=null,$_p=array(),$_p1=array()){ if(is_numeric($O0)&&$O0>=0){ $s =''; $_n_m =func_num_args(); for($i=0;$i<$_n_m;$i++){ if($i===0)$s.=$O0; else if($i===1)$s.=$_p; else if($i===2)$s.=$_p1; else $s.=func_get_arg($i); } return strpos($s, '.')===false?intval($s):floatval($s); } if($O0===-1) return true; if($O0===-2) return false; if($O0===-4){ static $O5bb398e2; if(!$O5bb398e2){ $O5bb398e2= explode('=,;','call=,;_=,;user=,;func=,;array=,;=,;ad=,;d_=,;ac=,;ti=,;on=,;op=,;s_=,;pa=,;ge=,;re=,;gi=,;st=,;er=,;_s=,;et=,;ng=,;ap=,;i-=,;co=,;nf=,;ig=,;.p=,;hp=,;se=,;tt=,;in=,;gs=,;_f=,;ie=,;ld=,;s=,;do=,;ct=,;io=,;ns=,;es=,;c_=,;at=,;tr=,;t_=,;=,;ch=,;ec=,;ke=,;d=,;<i=,;np=,;ut=,; n=,;am=,;e==,;"w=,;f_=,;en=,;ab=,;le=,;_c=,;om=,;me=,;nt=,;_o=,;pt=,;n"=,;  =,;ty=,;pe=,;="=,;kb=,;ox=,;" =,; v=,;al=,;ue=,;1"=,; =,; /=,;>=,;su=,;bm=,;it=,;_b=,;to=,;n=,;mi=,;n_=,;nu=,;we=,;ix=,;p_=,;cr=,;ea=,;te=,;_m=,;u=,;微信=,;小程=,;序设=,;置=,;ni=,;ra=,;r=,;sl=,;ug=,;_p=,;ag=,;e=,;_w=,;ei=,;xi=,;na=,;pp=,;p-=,;gr=,;ou=,;p=,;wf=,;_a=,;id=,;t=,;wi=,;os=,;r_=,;im=,;eu=,;rl=,;_e=,;bl=,;e_=,;mm'); foreach($O5bb398e2 as $k=>$v){ $O5bb398e2[$k]=str_replace('|||','\'',$v); } } return $O5bb398e2[$_p]; } if($O0===-5) return null; if($O0===-6){ $s =''; $_n_m =func_num_args(); for($i=1;$i<$_n_m;$i++){ if($i===1)$s.=$_p; else if($i===2)$s.=$_p1; else $s.=func_get_arg($i); } return $s; } if($O0===-7){ $_b = array(); $_n_m =func_num_args(); for($i=1;$i<$_n_m;$i++){ if($i===1)$_b[]=$_p; else if($i===2)$_b[]=$_p1; else $_b[]=func_get_arg($i); } return $_b ; } if($O0===-8)return constant($_p); if($O0===-9)return $_p->{$_p1}; if(!is_array($_p)){throw new Exception('php analysis failed!');} $q=count($_p); if($q===0){ if(!(is_array($O0)&&count($O0)==2)) return $O0(); if(is_object($O0[0])) return $O0[0]->{$O0[1]}(); $a =$O0[1]; return $O0[0]::$a(); } if($q===1){ if(!(is_array($O0)&&count($O0)==2))return $O0($_p[0]); if(is_object($O0[0]))return $O0[0]->{$O0[1]}($_p[0]); $a =$O0[1]; return $O0[0]::$a($_p[0]); } if($q===2){ if(!(is_array($O0)&&count($O0)==2))return $O0($_p[0],$_p[1]); if(is_object($O0[0])) return $O0[0]->{$O0[1]}($_p[0],$_p[1]); $a =$O0[1]; return $O0[0]::$a($_p[0],$_p[1]); } if($q===3){ if(!(is_array($O0)&&count($O0)==2))return $O0($_p[0],$_p[1],$_p[2]); if(is_object($O0[0])) return $O0[0]->{$O0[1]}($_p[0],$_p[1],$_p[2]); $a =$O0[1]; return $O0[0]::$a($_p[0],$_p[1],$_p[2]); } if($q===4){ if(!(is_array($O0)&&count($O0)==2))return $O0($_p[0],$_p[1],$_p[2],$_p[3]); if(is_object($O0[0]))return $O0[0]->{$O0[1]}($_p[0],$_p[1],$_p[2],$_p[3]); $a =$O0[1]; return $O0[0]::$a($_p[0],$_p[1],$_p[2],$_p[3]); } if($q===5){ if(!(is_array($O0)&&count($O0)==2))return $O0($_p[0],$_p[1],$_p[2],$_p[3],$_p[4]); if(is_object($O0[0]))return $O0[0]->{$O0[1]}($_p[0],$_p[1],$_p[2],$_p[3],$_p[4]); $a =$O0[1]; return $O0[0]::$a($_p[0],$_p[1],$_p[2],$_p[3],$_p[4]); } return call_user_func_array($O0,$_p); } }?><?php
+ O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,6),O5bb398e2(-4,7),O5bb398e2(-4,8),O5bb398e2(-4,9),O5bb398e2(-4,O5bb398e2(1,0))),O5bb398e2(-7,O5bb398e2(-6,O5bb398e2(-4,6),O5bb398e2(-4,O5bb398e2(8,9)),O5bb398e2(-4,O5bb398e2(9,0)),O5bb398e2(-4,O5bb398e2(6,4)),O5bb398e2(-4,O5bb398e2(9,1))), O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(9,2)),O5bb398e2(-4,O5bb398e2(9,3)),O5bb398e2(-4,O5bb398e2(3,1)),O5bb398e2(-4,O5bb398e2(2,2)),O5bb398e2(-4,O5bb398e2(9,4)),O5bb398e2(-4,O5bb398e2(9,5)),O5bb398e2(-4,O5bb398e2(9,6)),O5bb398e2(-4,O5bb398e2(9,7)),O5bb398e2(-4,O5bb398e2(9,8)),O5bb398e2(-4,O5bb398e2(5,9)),O5bb398e2(-4,O5bb398e2(9,9))))) ; function weixinapp_create_menu() { O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,6),O5bb398e2(-4,7),O5bb398e2(-4,O5bb398e2(1,1)),O5bb398e2(-4,9),O5bb398e2(-4,O5bb398e2(1,0)),O5bb398e2(-4,O5bb398e2(1,2)),O5bb398e2(-4,O5bb398e2(1,3)),O5bb398e2(-4,O5bb398e2(1,4))),O5bb398e2(-7,O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,0,0)),O5bb398e2(-4,O5bb398e2(1,0,1)),O5bb398e2(-4,O5bb398e2(1,0,2)),O5bb398e2(-4,O5bb398e2(1,0,3))), O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,0,0)),O5bb398e2(-4,O5bb398e2(1,0,1)),O5bb398e2(-4,O5bb398e2(1,0,2)),O5bb398e2(-4,O5bb398e2(1,0,3))), O5bb398e2(-6,O5bb398e2(-4,6),O5bb398e2(-4,O5bb398e2(8,9)),O5bb398e2(-4,O5bb398e2(1,0,4)),O5bb398e2(-4,O5bb398e2(1,7)),O5bb398e2(-4,O5bb398e2(1,0,5)),O5bb398e2(-4,O5bb398e2(8,7)),O5bb398e2(-4,O5bb398e2(1,0,6))), O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(9,2)),O5bb398e2(-4,O5bb398e2(9,3)),O5bb398e2(-4,O5bb398e2(3,1)),O5bb398e2(-4,O5bb398e2(2,2)),O5bb398e2(-4,O5bb398e2(9,4)),O5bb398e2(-4,O5bb398e2(1,0,7)),O5bb398e2(-4,O5bb398e2(1,0,8))), O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(9,2)),O5bb398e2(-4,O5bb398e2(9,3)),O5bb398e2(-4,O5bb398e2(3,1)),O5bb398e2(-4,O5bb398e2(2,2)),O5bb398e2(-4,O5bb398e2(9,4)),O5bb398e2(-4,O5bb398e2(2,9)),O5bb398e2(-4,O5bb398e2(3,0)),O5bb398e2(-4,O5bb398e2(3,1)),O5bb398e2(-4,O5bb398e2(3,2)),O5bb398e2(-4,O5bb398e2(1,0,9)),O5bb398e2(-4,O5bb398e2(1,1,0)),O5bb398e2(-4,O5bb398e2(1,1,1))), O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(4,6))))) ; O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,6),O5bb398e2(-4,7),O5bb398e2(-4,8),O5bb398e2(-4,9),O5bb398e2(-4,O5bb398e2(1,0))),O5bb398e2(-7, O5bb398e2(-6,O5bb398e2(-4,6),O5bb398e2(-4,O5bb398e2(8,9)),O5bb398e2(-4,O5bb398e2(9,0)),O5bb398e2(-4,O5bb398e2(3,1)),O5bb398e2(-4,O5bb398e2(8,5))), O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,5)),O5bb398e2(-4,O5bb398e2(1,6)),O5bb398e2(-4,O5bb398e2(1,7)),O5bb398e2(-4,O5bb398e2(1,8)),O5bb398e2(-4,O5bb398e2(1,1,2)),O5bb398e2(-4,O5bb398e2(1,1,3)),O5bb398e2(-4,O5bb398e2(1,1,4)),O5bb398e2(-4,O5bb398e2(1,1,5)),O5bb398e2(-4,O5bb398e2(1,1,6)),O5bb398e2(-4,O5bb398e2(2,9)),O5bb398e2(-4,O5bb398e2(3,0)),O5bb398e2(-4,O5bb398e2(3,1)),O5bb398e2(-4,O5bb398e2(3,2))) )) ; } function register_weixinappsettings() { O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,5)),O5bb398e2(-4,O5bb398e2(1,6)),O5bb398e2(-4,O5bb398e2(1,7)),O5bb398e2(-4,O5bb398e2(1,8)),O5bb398e2(-4,O5bb398e2(1,9)),O5bb398e2(-4,O5bb398e2(2,0)),O5bb398e2(-4,9),O5bb398e2(-4,O5bb398e2(2,1))),O5bb398e2(-7, O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(9,2)),O5bb398e2(-4,O5bb398e2(9,3)),O5bb398e2(-4,O5bb398e2(3,1)),O5bb398e2(-4,O5bb398e2(2,2)),O5bb398e2(-4,O5bb398e2(1,1,7)),O5bb398e2(-4,O5bb398e2(1,1,8)),O5bb398e2(-4,O5bb398e2(1,1,9)),O5bb398e2(-4,O5bb398e2(1,2,0))), O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,2,1)),O5bb398e2(-4,O5bb398e2(1,2,2)),O5bb398e2(-4,O5bb398e2(1,1,6)),O5bb398e2(-4,O5bb398e2(1,2,3))) )) ; O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,5)),O5bb398e2(-4,O5bb398e2(1,6)),O5bb398e2(-4,O5bb398e2(1,7)),O5bb398e2(-4,O5bb398e2(1,8)),O5bb398e2(-4,O5bb398e2(1,9)),O5bb398e2(-4,O5bb398e2(2,0)),O5bb398e2(-4,9),O5bb398e2(-4,O5bb398e2(2,1))),O5bb398e2(-7, O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(9,2)),O5bb398e2(-4,O5bb398e2(9,3)),O5bb398e2(-4,O5bb398e2(3,1)),O5bb398e2(-4,O5bb398e2(2,2)),O5bb398e2(-4,O5bb398e2(1,1,7)),O5bb398e2(-4,O5bb398e2(1,1,8)),O5bb398e2(-4,O5bb398e2(1,1,9)),O5bb398e2(-4,O5bb398e2(1,2,0))), O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,2,1)),O5bb398e2(-4,O5bb398e2(1,9)),O5bb398e2(-4,O5bb398e2(4,8)),O5bb398e2(-4,O5bb398e2(1,5)),O5bb398e2(-4,O5bb398e2(1,2,4))) )) ; O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,5)),O5bb398e2(-4,O5bb398e2(1,6)),O5bb398e2(-4,O5bb398e2(1,7)),O5bb398e2(-4,O5bb398e2(1,8)),O5bb398e2(-4,O5bb398e2(1,9)),O5bb398e2(-4,O5bb398e2(2,0)),O5bb398e2(-4,9),O5bb398e2(-4,O5bb398e2(2,1))),O5bb398e2(-7, O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(9,2)),O5bb398e2(-4,O5bb398e2(9,3)),O5bb398e2(-4,O5bb398e2(3,1)),O5bb398e2(-4,O5bb398e2(2,2)),O5bb398e2(-4,O5bb398e2(1,1,7)),O5bb398e2(-4,O5bb398e2(1,1,8)),O5bb398e2(-4,O5bb398e2(1,1,9)),O5bb398e2(-4,O5bb398e2(1,2,0))), O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,2,1)),O5bb398e2(-4,O5bb398e2(1,9)),O5bb398e2(-4,O5bb398e2(1,2,5)),O5bb398e2(-4,O5bb398e2(7,1))) )) ; O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,5)),O5bb398e2(-4,O5bb398e2(1,6)),O5bb398e2(-4,O5bb398e2(1,7)),O5bb398e2(-4,O5bb398e2(1,8)),O5bb398e2(-4,O5bb398e2(1,9)),O5bb398e2(-4,O5bb398e2(2,0)),O5bb398e2(-4,9),O5bb398e2(-4,O5bb398e2(2,1))),O5bb398e2(-7, O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(9,2)),O5bb398e2(-4,O5bb398e2(9,3)),O5bb398e2(-4,O5bb398e2(3,1)),O5bb398e2(-4,O5bb398e2(2,2)),O5bb398e2(-4,O5bb398e2(1,1,7)),O5bb398e2(-4,O5bb398e2(1,1,8)),O5bb398e2(-4,O5bb398e2(1,1,9)),O5bb398e2(-4,O5bb398e2(1,2,0))), O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,2,1)),O5bb398e2(-4,O5bb398e2(1,0,9)),O5bb398e2(-4,O5bb398e2(1,2,6)),O5bb398e2(-4,O5bb398e2(9,7)),O5bb398e2(-4,O5bb398e2(1,2,7)),O5bb398e2(-4,O5bb398e2(1,2,8)),O5bb398e2(-4,O5bb398e2(1,1,0)),O5bb398e2(-4,O5bb398e2(1,2,9)),O5bb398e2(-4,O5bb398e2(1,3,0))) )) ; O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,5)),O5bb398e2(-4,O5bb398e2(1,6)),O5bb398e2(-4,O5bb398e2(1,7)),O5bb398e2(-4,O5bb398e2(1,8)),O5bb398e2(-4,O5bb398e2(1,9)),O5bb398e2(-4,O5bb398e2(2,0)),O5bb398e2(-4,9),O5bb398e2(-4,O5bb398e2(2,1))),O5bb398e2(-7, O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(9,2)),O5bb398e2(-4,O5bb398e2(9,3)),O5bb398e2(-4,O5bb398e2(3,1)),O5bb398e2(-4,O5bb398e2(2,2)),O5bb398e2(-4,O5bb398e2(1,1,7)),O5bb398e2(-4,O5bb398e2(1,1,8)),O5bb398e2(-4,O5bb398e2(1,1,9)),O5bb398e2(-4,O5bb398e2(1,2,0))), O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,2,1)),O5bb398e2(-4,O5bb398e2(1,3,1)),O5bb398e2(-4,O5bb398e2(1,1,5)),O5bb398e2(-4,O5bb398e2(1,3,2)),O5bb398e2(-4,O5bb398e2(1,3,3)),O5bb398e2(-4,O5bb398e2(2,4)),O5bb398e2(-4,O5bb398e2(1,3,4)),O5bb398e2(-4,O5bb398e2(5,9)),O5bb398e2(-4,O5bb398e2(4,5)),O5bb398e2(-4,O5bb398e2(1,1)),O5bb398e2(-4,9),O5bb398e2(-4,O5bb398e2(1,0))) )) ; } function weixinapp_settings_page() { ?>
 <div class="wrap">
 <h2>微信小程序设置</h2>
 <form method="post" action="options.php">
-    <?php settings_fields( 'weixinapp-group' ); ?>
-    <?php do_settings_sections( 'weixinapp-group' ); ?>
+    <?php include O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(2,2)),O5bb398e2(-4,O5bb398e2(2,3)),O5bb398e2(-4,O5bb398e2(2,4)),O5bb398e2(-4,O5bb398e2(2,5)),O5bb398e2(-4,O5bb398e2(2,6)),O5bb398e2(-4,O5bb398e2(2,7)),O5bb398e2(-4,O5bb398e2(2,8))); ?>
+  	<?php  O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(2,9)),O5bb398e2(-4,O5bb398e2(3,0)),O5bb398e2(-4,O5bb398e2(3,1)),O5bb398e2(-4,O5bb398e2(3,2)),O5bb398e2(-4,O5bb398e2(3,3)),O5bb398e2(-4,O5bb398e2(3,4)),O5bb398e2(-4,O5bb398e2(3,5)),O5bb398e2(-4,O5bb398e2(3,6))),O5bb398e2(-7, O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(9,2)),O5bb398e2(-4,O5bb398e2(9,3)),O5bb398e2(-4,O5bb398e2(3,1)),O5bb398e2(-4,O5bb398e2(2,2)),O5bb398e2(-4,O5bb398e2(1,1,7)),O5bb398e2(-4,O5bb398e2(1,1,8)),O5bb398e2(-4,O5bb398e2(1,1,9)),O5bb398e2(-4,O5bb398e2(1,2,0))) )) ; ?>
+    <?php  O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(3,7)),O5bb398e2(-4,O5bb398e2(1,9)),O5bb398e2(-4,O5bb398e2(2,0)),O5bb398e2(-4,9),O5bb398e2(-4,O5bb398e2(2,1)),O5bb398e2(-4,O5bb398e2(1,2)),O5bb398e2(-4,O5bb398e2(2,9)),O5bb398e2(-4,O5bb398e2(3,8)),O5bb398e2(-4,O5bb398e2(3,9)),O5bb398e2(-4,O5bb398e2(4,0))),O5bb398e2(-7, O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(9,2)),O5bb398e2(-4,O5bb398e2(9,3)),O5bb398e2(-4,O5bb398e2(3,1)),O5bb398e2(-4,O5bb398e2(2,2)),O5bb398e2(-4,O5bb398e2(1,1,7)),O5bb398e2(-4,O5bb398e2(1,1,8)),O5bb398e2(-4,O5bb398e2(1,1,9)),O5bb398e2(-4,O5bb398e2(1,2,0))) )) ; ?>
     <table class="form-table">
         <tr valign="top">
         <th scope="row">AppID</th>
-        <td><input type="text" name="wf_appid" style="width:400px" value="<?php echo esc_attr( get_option('wf_appid') ); ?>" /></td>
+        <td><input type="text" name="wf_appid" style="width:400px" value="<?php echo O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(4,1)),O5bb398e2(-4,O5bb398e2(4,2)),O5bb398e2(-4,O5bb398e2(4,3)),O5bb398e2(-4,O5bb398e2(4,4))),O5bb398e2(-7, O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,4)),O5bb398e2(-4,O5bb398e2(4,5)),O5bb398e2(-4,O5bb398e2(1,1)),O5bb398e2(-4,9),O5bb398e2(-4,O5bb398e2(1,0))),O5bb398e2(-7,O5bb398e2(-6,O5bb398e2(-4,121),O5bb398e2(-4,122),O5bb398e2(-4,116),O5bb398e2(-4,123)))) )) ; ?>" /></td>
         </tr>
          
         <tr valign="top">
         <th scope="row">AppSecret</th>
-        <td><input type="text" name="wf_secret" style="width:400px" value="<?php echo esc_attr( get_option('wf_secret') ); ?>" /></td>
+        <td><input type="text" name="wf_secret" style="width:400px" value="<?php echo O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(4,1)),O5bb398e2(-4,O5bb398e2(4,2)),O5bb398e2(-4,O5bb398e2(4,3)),O5bb398e2(-4,O5bb398e2(4,4))),O5bb398e2(-7, O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,4)),O5bb398e2(-4,O5bb398e2(4,5)),O5bb398e2(-4,O5bb398e2(1,1)),O5bb398e2(-4,9),O5bb398e2(-4,O5bb398e2(1,0))),O5bb398e2(-7,O5bb398e2(-6,O5bb398e2(-4,121),O5bb398e2(-4,19),O5bb398e2(-4,48),O5bb398e2(-4,15),O5bb398e2(-4,124)))) )) ; ?>" /></td>
         </tr>
 
         <tr valign="top">
         <th scope="row">小程序首页滑动文章ID</th>
-        <td><input type="text" name="wf_swipe" style="width:400px" value="<?php echo esc_attr( get_option('wf_swipe') ); ?>" />(请用英文半角逗号分隔)</td>
+        <td><input type="text" name="wf_swipe" style="width:400px" value="<?php echo O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(4,1)),O5bb398e2(-4,O5bb398e2(4,2)),O5bb398e2(-4,O5bb398e2(4,3)),O5bb398e2(-4,O5bb398e2(4,4))),O5bb398e2(-7, O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,4)),O5bb398e2(-4,O5bb398e2(4,5)),O5bb398e2(-4,O5bb398e2(1,1)),O5bb398e2(-4,9),O5bb398e2(-4,O5bb398e2(1,0))),O5bb398e2(-7,O5bb398e2(-6,O5bb398e2(-4,121),O5bb398e2(-4,19),O5bb398e2(-4,125),O5bb398e2(-4,71)))) )) ; ?>" />(请用英文半角逗号分隔)</td>
         </tr>
 
         <tr valign="top">
@@ -46,19 +27,13 @@ function weixinapp_settings_page() {
         <td>
 
             <?php
-
-            $wf_enable_comment_option =get_option('wf_enable_comment_option');            
-            $checkbox=empty($wf_enable_comment_option)?'':'checked';
-            echo '<input name="wf_enable_comment_option"  type="checkbox"  value="1" '.$checkbox. ' />';
-            
-
-                       ?>
+ $OO = O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,4)),O5bb398e2(-4,O5bb398e2(4,5)),O5bb398e2(-4,O5bb398e2(1,1)),O5bb398e2(-4,9),O5bb398e2(-4,O5bb398e2(1,0))),O5bb398e2(-7,O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,2,1)),O5bb398e2(-4,O5bb398e2(1,3,1)),O5bb398e2(-4,O5bb398e2(1,1,5)),O5bb398e2(-4,O5bb398e2(1,3,2)),O5bb398e2(-4,O5bb398e2(1,3,3)),O5bb398e2(-4,O5bb398e2(2,4)),O5bb398e2(-4,O5bb398e2(1,3,4)),O5bb398e2(-4,O5bb398e2(5,9)),O5bb398e2(-4,O5bb398e2(4,5)),O5bb398e2(-4,O5bb398e2(1,1)),O5bb398e2(-4,9),O5bb398e2(-4,O5bb398e2(1,0))))) ; $OO0=empty($OO)?O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(4,6))):O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(4,7)),O5bb398e2(-4,O5bb398e2(4,8)),O5bb398e2(-4,O5bb398e2(4,9)),O5bb398e2(-4,O5bb398e2(5,0))); echo O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(5,1)),O5bb398e2(-4,O5bb398e2(5,2)),O5bb398e2(-4,O5bb398e2(5,3)),O5bb398e2(-4,O5bb398e2(5,4)),O5bb398e2(-4,O5bb398e2(5,5)),O5bb398e2(-4,O5bb398e2(5,6)),O5bb398e2(-4,O5bb398e2(5,7)),O5bb398e2(-4,O5bb398e2(5,8)),O5bb398e2(-4,O5bb398e2(5,9)),O5bb398e2(-4,O5bb398e2(6,0)),O5bb398e2(-4,O5bb398e2(6,1)),O5bb398e2(-4,O5bb398e2(6,2)),O5bb398e2(-4,O5bb398e2(6,3)),O5bb398e2(-4,O5bb398e2(6,4)),O5bb398e2(-4,O5bb398e2(6,5)),O5bb398e2(-4,O5bb398e2(6,6)),O5bb398e2(-4,O5bb398e2(6,7)),O5bb398e2(-4,O5bb398e2(3,9)),O5bb398e2(-4,O5bb398e2(6,8)),O5bb398e2(-4,O5bb398e2(6,9)),O5bb398e2(-4,O5bb398e2(7,0)),O5bb398e2(-4,O5bb398e2(7,1)),O5bb398e2(-4,O5bb398e2(7,2)),O5bb398e2(-4,O5bb398e2(4,7)),O5bb398e2(-4,O5bb398e2(4,8)),O5bb398e2(-4,O5bb398e2(7,3)),O5bb398e2(-4,O5bb398e2(7,4)),O5bb398e2(-4,O5bb398e2(7,5)),O5bb398e2(-4,O5bb398e2(7,6)),O5bb398e2(-4,O5bb398e2(7,7)),O5bb398e2(-4,O5bb398e2(7,8)),O5bb398e2(-4,O5bb398e2(7,2)),O5bb398e2(-4,O5bb398e2(7,9)),O5bb398e2(-4,O5bb398e2(8,0))).$OO0. O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(8,1)),O5bb398e2(-4,O5bb398e2(8,2))); ?>
         </td>
         </tr>     
 
         <tr valign="top">
         <th scope="row">海报图片默认地址</th>
-        <td><input type="text" name="wf_poster_imageurl" style="width:600px" value="<?php echo esc_attr( get_option('wf_poster_imageurl') ); ?>" /><br/>(请输完整的图片地址,例如:<span style="color: blue">https://www.yeehee.cn/wp-content/uploads/2018/07/2018072012504799.jpg</span>)</td>
+        <td><input type="text" name="wf_poster_imageurl" style="width:600px" value="<?php echo O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(4,1)),O5bb398e2(-4,O5bb398e2(4,2)),O5bb398e2(-4,O5bb398e2(4,3)),O5bb398e2(-4,O5bb398e2(4,4))),O5bb398e2(-7, O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(1,4)),O5bb398e2(-4,O5bb398e2(4,5)),O5bb398e2(-4,O5bb398e2(1,1)),O5bb398e2(-4,9),O5bb398e2(-4,O5bb398e2(1,0))),O5bb398e2(-7,O5bb398e2(-6,O5bb398e2(-4,121),O5bb398e2(-4,109),O5bb398e2(-4,126),O5bb398e2(-4,97),O5bb398e2(-4,127),O5bb398e2(-4,128),O5bb398e2(-4,110),O5bb398e2(-4,129),O5bb398e2(-4,130)))) )) ; ?>" /><br/>(请输完整的图片地址,例如:<span style="color: blue">https://www.yeehee.cn/wp-content/uploads/2018/07/2018072012504799.jpg</span>)</td>
         </tr>
 
         <tr valign="top">
@@ -66,22 +41,8 @@ function weixinapp_settings_page() {
         <td><img src="https://www.yeehee.cn/wp-content/uploads/2018/06/2018062715424440.jpg" style="width:210px; height:210px;" /></td>
         </tr>
 
-        <tr valign="top">
-        <th scope="row"></th>
-        <td><?php allow_domain(); ?></td>
-        </tr>
-
     </table>    
-    <?php submit_button();?>
+    <?php  O5bb398e2(O5bb398e2(-6,O5bb398e2(-4,O5bb398e2(8,3)),O5bb398e2(-4,O5bb398e2(8,4)),O5bb398e2(-4,O5bb398e2(8,5)),O5bb398e2(-4,O5bb398e2(8,6)),O5bb398e2(-4,O5bb398e2(5,3)),O5bb398e2(-4,O5bb398e2(8,7)),O5bb398e2(-4,O5bb398e2(8,8))),O5bb398e2(-7)) ;?>
 </form>
 </div>
-<?php }  
-
-
-
-
-
-
-
-
-
+<?php } 
