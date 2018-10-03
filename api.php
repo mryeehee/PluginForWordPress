@@ -317,10 +317,8 @@ function allow_domain()
   	$str='5oGt5Zac5oKo77yM6K+l5Z+f5ZCN5bey5o6I5p2D77yM6K+354K55Ye75L+d5a2Y5oyJ6ZKu5a6M5oiQ6YWN572u77yB';
   	$str1='6Zi/5Zmifn7or6Xln5/lkI3mnKrmjojmnYPvvIzor7fogZTns7vkvZzogIXvvIhXZWNoYXQgSUQ6IHJ5YW5feXV177yJ6LSt5Lmw5o6I5p2D54mI5pys';
     $is_allow=false;
-
     $servername=trim($_SERVER['SERVER_NAME']);
     $Array=array("www.yeehee.cn","yeehee.cn");
-
     foreach($Array as $value){
             $value=trim($value);
             $domain=explode($value,$servername);
