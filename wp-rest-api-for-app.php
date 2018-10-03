@@ -19,6 +19,7 @@ include(WP_REST_API_FOR_APP_PLUGIN_DIR . 'addpageview.php');    // 更新文章�
 include(WP_REST_API_FOR_APP_PLUGIN_DIR . 'custom-fields-rest-prepare-post.php');    // 自定义文章输出的字段
 include(WP_REST_API_FOR_APP_PLUGIN_DIR . 'post-like.php');    // 点赞
 include(WP_REST_API_FOR_APP_PLUGIN_DIR . 'weixin-praise.php');    //赞赏 
+include(WP_REST_API_FOR_APP_PLUGIN_DIR . 'api-config.php');    //API公用函数配置
 include(WP_REST_API_FOR_APP_PLUGIN_DIR . 'api.php');    // 公用函数
 include(WP_REST_API_FOR_APP_PLUGIN_DIR . 'weixin-comment.php');    // 微信提交评论
 include(WP_REST_API_FOR_APP_PLUGIN_DIR . 'weixin-send-message.php');    // 发送微信模版消息
