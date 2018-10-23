@@ -26,7 +26,8 @@ function custom_fields_rest_prepare_post( $data, $post, $request) {
     $_data['post_thumbnail_image_624']=$images['post_thumbnail_image_624'];
     $comments_count = wp_count_comments($post_id);
     
-   
+    $_data['post_tags'] = wp_get_post_tags($post_id);// for tags display
+    $_data['author_name'] = get_the_author_meta('display_name', $_data['author']);
     
     $_data['total_comments']=$comments_count->total_comments;
     $category =get_the_category($post_id);
